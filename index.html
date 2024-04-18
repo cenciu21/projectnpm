@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dogs</title>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <img src="..." alt="Dog image" id="image">
+    <script>
+    axios.get('https://dog.ceo/api/breeds/image/random')
+    .then((e) => {
+        document.querySelector('#image').src = e.data.message
+    })
+    </script>
+</body>
+</html>
